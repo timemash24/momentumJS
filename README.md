@@ -1,3 +1,3 @@
 # momentumJS
 
-Productivity App built with Javascript
+Productivity App⏰ made with VanillaJs

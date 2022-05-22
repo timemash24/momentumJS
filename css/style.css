@@ -17,6 +17,21 @@
   filter: brightness(40%);
 }
 
+#windowImg {
+  max-width: 70%;
+  max-height: 70%;
+  /* height: 100vh; */
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  overflow: auto;
+  position: fixed;
+  z-index: 1;
+  filter: brightness(50%);
+}
+
 #login-form {
   margin: 10px;
 }
@@ -32,4 +47,9 @@
 #logout-btn {
   margin: 25px 20px;
   vertical-align: center;
+}
+
+#todo-form input {
+  margin: 20px;
+  width: 300px;
 }

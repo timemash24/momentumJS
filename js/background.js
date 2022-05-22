@@ -1,6 +1,6 @@
 const width = 1600;
 const height = 900;
-const KEYWORD = "sky";
+const KEYWORD = "space";
 
 const url = `https://source.unsplash.com/${width}x${height}/?${KEYWORD}`;
 const bgImg = document.createElement("img");

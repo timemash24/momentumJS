@@ -18,7 +18,8 @@ function onLoginSubmit(event) {
 
 // 로그인 정보 표시
 function paintGreetings(username) {
-  greeting.innerText = username;
+  greeting.innerText = `창 밖을 봐, 
+  ${username}`;
   greeting.classList.remove(HIDDEN_CLASSNAME);
   logoutBtn.classList.remove(HIDDEN_CLASSNAME);
 }

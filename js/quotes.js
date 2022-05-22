@@ -76,4 +76,5 @@ const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
 quote.innerText = todaysQuote.quote;
 song.innerText = `
+
 < ${todaysQuote.song} >`;

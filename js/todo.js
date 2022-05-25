@@ -1,14 +1,18 @@
+// todo list 만들기
+
 const todoForm = document.querySelector("#todo-form");
 const todoInput = document.querySelector("#todo-form input");
 const todoList = document.querySelector("#todo-list");
 const TODOS_KEY = "todos";
 
-let todos = [];
+let todos = []; // 현재 저장된 할일 목록
 
+// 할일 목록 배열로 저장
 function saveTodos() {
   localStorage.setItem(TODOS_KEY, JSON.stringify(todos));
 }
 
+// 삭제
 function deleteTodo(event) {
   const li = event.target.parentElement;
   li.remove();
@@ -16,6 +20,7 @@ function deleteTodo(event) {
   saveTodos();
 }
 
+// 할일 표시
 function paintTodo(newTodo) {
   const li = document.createElement("li");
   li.id = newTodo.id;
@@ -29,6 +34,7 @@ function paintTodo(newTodo) {
   todoList.appendChild(li);
 }
 
+// 할일 입력 완료시 동작
 function handleTodoSubmit(event) {
   event.preventDefault();
   const newTodo = todoInput.value;
@@ -43,6 +49,7 @@ todoForm.addEventListener("submit", handleTodoSubmit);
 
 const savedTodos = localStorage.getItem(TODOS_KEY);
 
+// 저장된 할일 목록 불러오기
 if (savedTodos) {
   const parsedTodos = JSON.parse(savedTodos);
   todos = parsedTodos;

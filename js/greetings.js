@@ -1,3 +1,5 @@
+// 사용자 로그인 기능과 환영 멘트
+
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
 const loginResult = document.querySelector("#login-result");

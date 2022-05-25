@@ -1,7 +1,8 @@
+// 시계 만들기
+
 const clock = document.querySelector("h1#clock");
 const weekdays = ["일", "월", "화", "수", "목", "금", "토"];
 
-// 시계 만들기
 function getClock() {
   const fullDate = new Date();
   const hours = String(fullDate.getHours()).padStart(2, "0");

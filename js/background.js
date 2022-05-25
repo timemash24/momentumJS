@@ -1,22 +1,47 @@
-const width = 1600;
-const height = 900;
-const KEYWORD = "space";
+// 배경 이미지 변경하기
 
-const url = `https://source.unsplash.com/${width}x${height}/?${KEYWORD}`;
-const bgImg = document.createElement("img");
+// 1. tag 입력받고 그에 따라 이미지 새로고침
+// 2. tag 입력값은 저장하고 새로고침시 그에 따른 랜덤 이미지 표시
+const tagForm = document.querySelector("#tag-form");
+const tagInput = document.querySelector("#tag-form input");
+let keyword = "space";
+const TAG = "tag";
+
+if (localStorage.getItem(TAG)) {
+  keyword = localStorage.getItem(TAG);
+  tagInput.value = keyword;
+}
+
+const url = `https://source.unsplash.com/1600x900/?${keyword}`;
 const windowImg = document.createElement("img");
 
-bgImg.id = "bgImg";
-bgImg.src = url;
+const body = document.body;
+
 windowImg.id = "windowImg";
 windowImg.src = "img/window.png";
+body.appendChild(windowImg);
 
-document.body.appendChild(bgImg);
-document.body.appendChild(windowImg);
+body.style.backgroundImage = `url(${url})`;
 
-// function onWindowResize() {
-//   const img = document.querySelector(".bgImg");
-//   img.style.width = "100vh";
-// }
+function searchByTag(tag) {
+  fetch(`https://source.unsplash.com/1600x900/?${tag.toLowerCase()}`).then(
+    (response) => {
+      body.style.backgroundImage = `url(${response.url})`;
+    }
+  );
+}
 
-// window.addEventListener("resize", onWindowResize);
+function handleTagSubmit(event) {
+  event.preventDefault();
+  const tag = tagInput.value;
+  searchByTag(tag);
+  localStorage.setItem(TAG, tag);
+}
+
+tagForm.addEventListener("submit", handleTagSubmit);
+
+function onWindowResize() {
+  body.style.backgroundSize = "cover";
+}
+
+window.addEventListener("resize", onWindowResize);

@@ -1,8 +1,13 @@
 body {
   background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 93.5vh;
   color: azure;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  /* text-shadow: 1px 1px 4px gray; */
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.979);
 }
 
 ul {
@@ -10,7 +15,7 @@ ul {
 }
 
 button:hover {
-  transform: scale(0.96);
+  transform: scale(0.94);
 }
 
 .hidden {
@@ -29,10 +34,7 @@ button:hover {
   z-index: 3;
 }
 
-#bgImg {
-  /* max-width: 100%;
-  max-height: 100%; */
-  /* height: 100vh; */
+/* #bgImg {
   width: 1600px;
   height: 900px;
   left: 0;
@@ -44,14 +46,15 @@ button:hover {
   position: fixed;
   z-index: -1;
   filter: brightness(40%);
+} */
+
+#clock {
+  text-shadow: 1px 1px 4px gray;
 }
 
 #windowImg {
-  /* max-width: 70%;
-  max-height: 70%; */
   width: 700px;
   height: 600px;
-  /* height: 100vh; */
   left: 0;
   right: 0;
   top: 0;
@@ -60,11 +63,12 @@ button:hover {
   overflow: auto;
   position: fixed;
   z-index: -1;
-  /* filter: brightness(60%); */
+  filter: brightness(60%);
 }
 
 #weather {
   font-size: 14pt;
+  text-shadow: 1px 1px 4px gray;
 }
 
 #login-form {
@@ -93,6 +97,8 @@ button:hover {
   margin: 130px 50px 60px;
   line-height: 50px;
   text-align: center;
+  /* text-shadow: 4px 4px 0px rgb(160, 76, 255); */
+  text-shadow: none;
 }
 
 #logout-btn {
@@ -108,6 +114,7 @@ button:hover {
 #quote {
   width: 400px;
   float: left;
+  text-shadow: 1px 1px 0px black;
 }
 
 #todo-form input {
@@ -116,15 +123,22 @@ button:hover {
   font-size: 11pt;
   padding-left: 10px;
   outline: none;
+  border: none;
   border-radius: 15px;
 }
 
 #todo-list {
   margin-right: 100px;
+  text-shadow: 1px 1px 1px black;
 }
 
 #todo-list button {
   margin: 10px 15px;
   border-radius: 15px;
   background-color: goldenrod;
+  outline: 0;
+  border: 0;
+}
+
+#tag-form input {
 }

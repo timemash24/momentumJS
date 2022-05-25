@@ -1,7 +1,7 @@
 // 배경 이미지 변경하기
-
 // 1. tag 입력받고 그에 따라 이미지 새로고침
-// 2. tag 입력값은 저장하고 새로고침시 그에 따른 랜덤 이미지 표시
+// 2. tag 입력값 저장하고 새로고침시 그에 따른 랜덤 이미지 표시
+
 const tagForm = document.querySelector("#tag-form");
 const tagInput = document.querySelector("#tag-form input");
 let keyword = "space";
@@ -40,8 +40,8 @@ function handleTagSubmit(event) {
 
 tagForm.addEventListener("submit", handleTagSubmit);
 
-function onWindowResize() {
-  body.style.backgroundSize = "cover";
-}
+// function onWindowResize() {
+//   body.style.backgroundSize = "cover";
+// }
 
-window.addEventListener("resize", onWindowResize);
+// window.addEventListener("resize", onWindowResize);

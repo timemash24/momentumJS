@@ -7,6 +7,7 @@ const greeting = document.querySelector("#greeting");
 const logoutBtn = document.querySelector("#logout-btn");
 
 const HIDDEN_CLASSNAME = "hidden";
+const MIDDLE_CLASSNAME = "middle_menu";
 const USERNAME_KEY = "username";
 
 // 로그인 버튼 동작
@@ -27,7 +28,7 @@ function paintGreetings(username) {
   logoutBtn.classList.remove(HIDDEN_CLASSNAME);
 }
 
-// 로그인 정보 있을 경우
+// 로그인 정보 확인 후 동작
 const savedUsername = localStorage.getItem(USERNAME_KEY);
 if (!savedUsername) {
   loginForm.classList.remove(HIDDEN_CLASSNAME);
@@ -43,6 +44,7 @@ function onLogoutClick() {
   loginInput.value = "";
   greeting.classList.add(HIDDEN_CLASSNAME);
   logoutBtn.classList.add(HIDDEN_CLASSNAME);
+  loginResult.classList.add(HIDDEN_CLASSNAME);
   loginForm.classList.remove(HIDDEN_CLASSNAME);
 }
 

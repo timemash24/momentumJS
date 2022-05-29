@@ -3,10 +3,11 @@ body {
   /* background-size: cover; */
   /* background-repeat: no-repeat; */
   /* height: 96vh; */
+  overflow-x: hidden;
   margin: 0px;
   color: azure;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   display: flex;
 }
 
@@ -21,6 +22,10 @@ button:hover {
 input::placeholder {
   color: azure;
 }
+
+/* .main {
+  display: flex;
+} */
 
 .bg_img {
   position: relative;
@@ -239,4 +244,100 @@ input::placeholder {
   background-color: goldenrod;
   outline: 0;
   border: 0;
+}
+
+/* 반응형으로 만들기 */
+/* height 429px */
+/* width 1121px */
+@media screen and (max-width: 1121px) {
+  body {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .left_menu {
+    width: 100%;
+    top: 10%;
+    left: 32%;
+    margin: 0;
+  }
+
+  .middle_menu {
+    width: 100%;
+    margin: 0;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+
+  .right_menu {
+    width: 100%;
+    top: 52%;
+    left: 0;
+    transform: none;
+    align-items: center;
+  }
+
+  .left_menu #clock {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+  }
+
+  .middle_menu #greeting {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .middle_menu #login-form.narrow {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .middle_menu #login-result {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .right_menu #todo-list {
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    /* width: auto; */
+  }
+
+  #window-img {
+    display: none;
+  }
+
+  #weather {
+    display: none;
+  }
+
+  #quote {
+    display: none;
+  }
+
+  #tag-form {
+    display: none;
+  }
+
+  #todo-form {
+    display: none;
+  }
 }

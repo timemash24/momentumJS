@@ -59,7 +59,7 @@ function onNarrowWindow(username) {
   //   loginResult.classList.add(HIDDEN_CLASSNAME);
   // }
   if (username) {
-    if (window.innerWidth <= 1121) {
+    if (window.innerWidth <= 880) {
       loginForm.classList.add(HIDDEN_CLASSNAME);
       loginForm.classList.remove(NARROW_CLASSNAME);
       greeting.innerText = `아담한 세계도 
@@ -69,7 +69,7 @@ function onNarrowWindow(username) {
   ${username}`;
     }
   } else {
-    if (window.innerWidth <= 1121) {
+    if (window.innerWidth <= 880) {
       loginForm.classList.add(NARROW_CLASSNAME);
     } else {
       loginForm.classList.remove(NARROW_CLASSNAME);

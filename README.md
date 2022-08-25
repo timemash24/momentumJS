@@ -1,5 +1,5 @@
 # momentumJS
-VanillaJS로 개발한 생산성 앱 ⏰
+VanillaJS로 제작한 생산성 앱 ⏰
 
 Demo Site 🔗 https://timemash24.github.io/momentumJS/
 

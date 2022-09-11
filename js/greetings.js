@@ -1,9 +1,8 @@
 // 사용자 로그인 기능과 환영 멘트
-
 const loginForm = document.querySelector('#login-form');
 const loginInput = document.querySelector('#login-form input');
 const loginResult = document.querySelector('#login-result');
-const greeting = document.querySelector('#greeting');
+const greetingText = document.querySelector('#greeting');
 const logoutBtn = document.querySelector('#logout-btn');
 
 const HIDDEN_CLASSNAME = 'hidden';
@@ -23,10 +22,10 @@ function onLoginSubmit(event) {
 
 // 로그인 정보 표시
 function paintGreetings(username) {
-  greeting.innerText = `창 밖을 봐, 
+  greetingText.innerText = `창 밖을 봐, 
   ${username}`;
   loginResult.classList.remove(HIDDEN_CLASSNAME);
-  greeting.classList.remove(HIDDEN_CLASSNAME);
+  greetingText.classList.remove(HIDDEN_CLASSNAME);
   logoutBtn.classList.remove(HIDDEN_CLASSNAME);
 }
 
@@ -42,9 +41,9 @@ if (!savedUsername) {
 // 로그아웃 버튼 동작
 function onLogoutClick() {
   localStorage.removeItem(USERNAME_KEY);
-  greeting.innerText = '';
+  greetingText.innerText = '';
   loginInput.value = '';
-  greeting.classList.add(HIDDEN_CLASSNAME);
+  greetingText.classList.add(HIDDEN_CLASSNAME);
   logoutBtn.classList.add(HIDDEN_CLASSNAME);
   loginResult.classList.add(HIDDEN_CLASSNAME);
   loginForm.classList.remove(HIDDEN_CLASSNAME);
@@ -62,10 +61,10 @@ function onNarrowWindow(username) {
     if (window.innerWidth <= 880) {
       loginForm.classList.add(HIDDEN_CLASSNAME);
       loginForm.classList.remove(NARROW_CLASSNAME);
-      greeting.innerText = `아담한 세계도 
+      greetingText.innerText = `아담한 세계도 
     아늑하지 ${username} ?`;
     } else {
-      greeting.innerText = `창 밖을 봐, 
+      greetingText.innerText = `창 밖을 봐, 
   ${username}`;
     }
   } else {
